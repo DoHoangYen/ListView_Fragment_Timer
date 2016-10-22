@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@drawable/green_background_itemlist"
+
+        >
+        <TextView
+            android:id="@+id/txtTenMonAn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TenMon"
+            android:textSize="@dimen/size_title"
+            android:textColor="@color/colorAccent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:background="@drawable/bg_deatail_cooking">
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nguyên liệu"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/size_normal"/>
+            <TextView
+                android:id="@+id/txtNguyenLieu"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/size_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nguyen Lieu"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách chế biến"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/size_normal"/>
+
+
+                <TextView
+                    android:id="@+id/txtCachCheBien"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_mid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nguyen Lieu"
+                    android:singleLine="false"
+                    android:maxLines = "1000"
+                    android:scrollbars = "vertical"/>
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+        <include layout="@layout/bottombar_layout"></include>
+    </FrameLayout>
+</LinearLayout>
